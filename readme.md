@@ -25,7 +25,7 @@ We are going to return to our `candies` app to focus on how to add views using E
 First, let's require `ejs` in our applications `package.json`.  In dependencies, add:
 
 ```json
-"ejs": "^2.3.3"
+"ejs": "^2.4.2",
 ```
 ...and then:
 
@@ -58,6 +58,23 @@ Since we're ready to use `.ejs` now, let's set up our file structure to make sur
 
 ```
 
+#### More Middleware We Might Use:
+* [EJS](https://www.npmjs.com/package/ejs)
+* [body-parser](https://www.npmjs.com/package/body-parser)
+* [method-override](https://www.npmjs.com/package/method-override)
+* [express-helpers](https://www.npmjs.com/package/express-helpers)
+* [path](https://docs.nodejitsu.com/articles/file-system/how-to-use-the-path-module/)
+* [morgan](https://www.npmjs.com/package/morgan)
+* [cookie-parser](https://www.npmjs.com/package/cookie-parser) 
+
+<details>
+<summary>What factors might you consider before deciding whether or not to use a particular middleware package?</summary>
+- What is the difficulty of the technical requirement the middleware addresses?
+- How effective is the middleware at addressing the given requirement?
+- How old/new is the middleware? When was its last update?
+- How popular is the middleware? Do a lot of other people use it?
+</details>
+
 ## Set up your form - Independent Practice (10 mins)
 
 Ok, you've done this before.  Set up your form real quick in `candy/form.ejs` with:
@@ -88,7 +105,7 @@ Ok, you've done this before.  Set up your form real quick in `candy/form.ejs` wi
 ```
 -->
 
-## Set up our layout to iterate over data - Codealong (15 mins)
+## Set up our layout to iterate over data - Catch-up (15 mins)
 
 Let's create an index page that will double as our form.  But first let's make sure our application is set up to pass data from our database to our views if a user visits the `/candies` endpoint.
 
@@ -191,8 +208,7 @@ So let's create a `<body>` and first, let's show all of our candies, with the na
 </body>
 ```
 
-Now, just like Rails, we can use partials within our layout.ejs page.  The method is `include` instead of `render`, though:
-
+Now we can use partials within our layout.ejs page.  The method is `include` instead of `render`:
 
 ```html
 ...
@@ -239,7 +255,7 @@ Now your `layout.ejs` page should look like this:
 
 ## Independent Practice (15 mins)
 
-> ***Note:*** This can be a pair programming activity or done independently; the solution code for this lab does not cover the solution to this seciton
+> ***Note:*** This can be a pair programming activity or done independently
 
 Expand on this application by doing the following:
 
@@ -252,8 +268,8 @@ Expand on this application by doing the following:
 Use these [docs](http://www.embeddedjs.com/getting_started.html).
 
 
-
 ## Conclusion (5 mins)
-- Describe how `ejs` compares to `erb`.
+- Describe the difference between `ejs` views and partials.
 - Describe how to configure your Express app to use `ejs`.
-- Identify some `ejs`-specific syntax used to use different partials.
+- Explain how `ejs` lets us render dynamic data on a particular view.
+- Identify some middleware we are using and explain why you might or might not use it again.
