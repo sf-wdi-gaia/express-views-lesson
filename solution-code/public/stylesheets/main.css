@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway|Lobster);
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url('https://whatchewtalkingabout.files.wordpress.com/2013/01/cotton-candy.jpg');
+    width: 100%;
+}
+
+h1, h3 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+.container {
+    /* border: 1px solid white; */
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+}
+iframe {
+    float: right;
+    clear: left;
+    padding-top: 5%;
+    padding-right: 5%;
+    max-width: 70%;
+}
+
+ul {
+    list-style-type: none;
+}

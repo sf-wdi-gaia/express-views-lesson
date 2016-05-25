@@ -1,0 +1,20 @@
+<% var link = ["http://www.youtube.com/embed/mKli0y-Xr-Q", "http://www.youtube.com/embed/sn8KYD1Vco0", "http://www.youtube.com/embed/6bLOjmY--TA", "http://www.youtube.com/embed/3rYoRaxgOE0"]; %>
+<% include ./partials/candy/header %>
+  <h1>
+    <a href="">Candy Shoppe</a>
+  </h1>
+  </div>
+  <hr>
+  <div class="container">
+  <iframe width="640" height="390" src="<%= link[Math.floor(Math.random() * link.length)] %>?autoplay=0" frameborder="0"></iframe>
+  <% for(var i=0; i< candies.length; i++) {  %>
+    <ul>
+      <li><b>Name : </b> <%- link_to(candies[i].name, '/candies/' + candies[i]._id ) %></li>
+      <li><b>Color : </b> <%= candies[i].color %></li>
+    </ul>
+  <% } %>
+  </div>
+
+    <div class="container">
+        <% include ./partials/candy/form %>
+<% include ./partials/candy/footer %>
