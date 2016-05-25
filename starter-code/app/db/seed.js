@@ -11,7 +11,8 @@ Candy.remove({}, function(err) {
   {id: 1, name: "Chewing Gum", color: "Pink"},
   {id: 2, name: "Pez", color: "Green"},
   {id: 3, name: "Marshmallow", color: "White"},
-  {id: 4, name: "Candy Stick", color: "Blue"}
+  {id: 4, name: "Candy Stick", color: "Blue"},
+  {id: 5, name: "Twizzlers", color: "Red or Black"}
 ];
 
 Candy.create(candies, function(err, docs) {

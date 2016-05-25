@@ -6,6 +6,7 @@ var app = express();
 var methodOverride = require('method-override'); // allows POST method to be used for PUT and/or DELETE
 
 var helpers = require('express-helpers'); // we can use <%- link_to ... %> and other methods similar to ERB in Rails
+helpers(app);  // turns it on
 
 var mongoose = require('mongoose');
 

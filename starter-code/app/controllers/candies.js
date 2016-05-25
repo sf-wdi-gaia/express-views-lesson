@@ -4,15 +4,19 @@ var Candy = require('../models/Candy');
 function getAll(req, res){
   Candy.find({}, function(err, candies){
     if(err) res.json({message: 'Candies not found: ' + err});
-    res.json({message: candies});
+    // res.json({message: candies});
+    res.render('layout', {candies: candies});
   });
-
-
 }
 
 // POST
 function createCandy(req, res){
-  console.log('hello');
+  // console.log(req.body);
+  Candy.create({name: req.body.name, color: req.body.color}, function(err, candy){
+    if(err) res.json({message: 'Could not create candy, ' + err});
+    res.json({candy: candy});
+    // res.redirect('/candy');
+  })
 }
 
 // GET
