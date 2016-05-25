@@ -1,5 +1,5 @@
 {
-  "name": "express-routing-lab",
+  "name": "express-views-lesson",
   "version": "0.0.0",
   "scripts": {
     "start": "nodemon app.js"
