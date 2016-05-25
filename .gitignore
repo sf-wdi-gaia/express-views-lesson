@@ -1,2 +1,4 @@
 node_modules
+starter-code/node_modules
+solution-code/node_modules
 *.DS_Store
