@@ -4,16 +4,13 @@ var express = require('express'),
     methodOverride = require('method-override'); //used to manipulate POST
 
 // require the controller
-
+var candiesController = require('../controllers/candies');
 
 // http://127.0.0.1:3000/candies
 
-
-  //GET all candies
-
-
-  //POST a new blob
-
+router.route('/candies')
+  .get(candiesController.getAll)
+  .post(candiesController.createCandy);
 
 
 router.route('/candies/:id')

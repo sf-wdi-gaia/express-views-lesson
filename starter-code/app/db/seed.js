@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var conn = mongoose.connect('mongodb://localhost/candies-app');
+var conn = mongoose.connect('mongodb://localhost/candies-app-demo');
 var Candy = require("../models/Candy");
 Candy.remove({}, function(err) {
   if (err) {

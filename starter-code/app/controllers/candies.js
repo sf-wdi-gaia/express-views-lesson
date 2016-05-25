@@ -1,46 +1,55 @@
 var Candy = require('../models/Candy');
 
 // GET
+function getAll(req, res){
+  Candy.find({}, function(err, candies){
+    if(err) res.json({message: 'Candies not found: ' + err});
+    res.json({message: candies});
+  });
 
+
+}
 
 // POST
-
+function createCandy(req, res){
+  console.log('hello');
+}
 
 // GET
-function getCandy(request, response) {
-  var id = request.params.id;
+function getCandy(req, res) {
+  var id = req.params.id;
 
   Candy.findById({_id: id}, function(error, candy) {
-    if(error) response.json({message: 'Could not find candy b/c:' + error});
+    if(error) res.json({message: 'Could not find candy b/c:' + error});
 
-    response.json({candy: candy});
+    res.json({candy: candy});
   });
 }
 
-function updateCandy(request, response) {
-  var id = request.params.id;
+function updateCandy(req, res) {
+  var id = req.params.id;
 
   Candy.findById({_id: id}, function(error, candy) {
-    if(error) response.json({message: 'Could not find candy b/c:' + error});
+    if(error) res.json({message: 'Could not find candy b/c:' + error});
 
-    if(request.body.name) candy.name = request.body.name;
-    if(request.body.color) candy.color = request.body.color;
+    if(req.body.name) candy.name = req.body.name;
+    if(req.body.color) candy.color = req.body.color;
 
     candy.save(function(error) {
-      if(error) response.json({messsage: 'Could not update candy b/c:' + error});
+      if(error) res.json({messsage: 'Could not update candy b/c:' + error});
 
-      response.json({message: 'Candy successfully updated'});
+      res.json({message: 'Candy successfully updated'});
     });
   });
 }
 
-function removeCandy(request, response) {
-  var id = request.params.id;
+function removeCandy(req, res) {
+  var id = req.params.id;
 
   Candy.remove({_id: id}, function(error) {
-    if(error) response.json({message: 'Could not delete candy b/c:' + error});
+    if(error) res.json({message: 'Could not delete candy b/c:' + error});
 
-    response.json({message: 'Candy successfully deleted'});
+    res.json({message: 'Candy successfully deleted'});
   });
 }
 
