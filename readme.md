@@ -62,6 +62,7 @@ Since we're ready to use `.ejs` now, let's set up our file structure to make sur
 * [EJS](https://www.npmjs.com/package/ejs)
 * [body-parser](https://www.npmjs.com/package/body-parser)
 * [method-override](https://www.npmjs.com/package/method-override)
+* [lazy-cache](https://www.npmjs.com/package/lazy-cache)
 * [express-helpers](https://www.npmjs.com/package/express-helpers)
 * [path](https://docs.nodejitsu.com/articles/file-system/how-to-use-the-path-module/)
 * [morgan](https://www.npmjs.com/package/morgan)
