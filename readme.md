@@ -274,3 +274,8 @@ Use these [docs](http://www.embeddedjs.com/getting_started.html).
 - Describe how to configure your Express app to use `ejs`.
 - Explain how `ejs` lets us render dynamic data on a particular view.
 - Identify some middleware we are using and explain why you might or might not use it again.
+
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
